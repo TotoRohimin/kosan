@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamar - Ibu Kos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a href="dashboard.html" class="brand"><span class="logo">🏠</span> Kos Melati Asri</a>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="kamar.html" class="active">🛏️ Kamar</a>
+      <a href="penghuni.html">👤 Data Penghuni</a>
+      <a href="pembayaran.html">💳 Pembayaran</a>
+      <a href="riwayat.html">🕘 Riwayat Pembayaran</a>
+      <a href="laporan.html">📄 Laporan</a>
+      <a href="informasi-kos.html">⚙️ Informasi Kos</a>
+      <a href="index.html" target="_blank">🌐 Lihat Halaman Publik</a>
+    </nav>
+    <a href="login.html" class="logout" style="padding:11px 14px">🚪 Keluar</a>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Update Kamar</h1>
+        <p>Kelola data dan status setiap kamar</p>
+      </div>
+      <div class="user-chip"><span class="avatar">S</span> Ibu Siti</div>
+    </div>
+
+    <!-- Daftar kamar -->
+    <div class="card mb">
+      <h2>Daftar Kamar</h2>
+      <p class="sub">12 kamar terdaftar</p>
+      <div class="toolbar">
+        <input type="search" placeholder="Cari nomor kamar...">
+        <select>
+          <option>Semua status</option>
+          <option>Terisi</option>
+          <option>Kosong</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>No. Kamar</th><th>Tipe</th><th>Harga / Bulan</th><th>Status</th><th>Penghuni</th><th>Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>A1</td><td>Standar</td><td>Rp 850.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Dewi Lestari</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>A2</td><td>Standar</td><td>Rp 850.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Rina Marlina</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>A3</td><td>Standar</td><td>Rp 850.000</td><td><span class="badge badge-green">Kosong</span></td><td>-</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>A4</td><td>Standar</td><td>Rp 850.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Putri Ayu</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>A5</td><td>Nyaman</td><td>Rp 1.100.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Maya Anggraini</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>A6</td><td>Nyaman</td><td>Rp 1.100.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Lia Permata</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>B1</td><td>Nyaman</td><td>Rp 1.100.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Sari Wulandari</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>B2</td><td>Nyaman</td><td>Rp 1.100.000</td><td><span class="badge badge-green">Kosong</span></td><td>-</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>B3</td><td>Nyaman</td><td>Rp 1.100.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Nadia Safitri</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>B4</td><td>Premium</td><td>Rp 1.450.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Anisa Rahma</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>B5</td><td>Premium</td><td>Rp 1.450.000</td><td><span class="badge badge-green">Kosong</span></td><td>-</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+            <tr><td>B6</td><td>Premium</td><td>Rp 1.450.000</td><td><span class="badge badge-blue">Terisi</span></td><td>Citra Dewanti</td><td class="aksi"><a href="#form-kamar" class="btn btn-sm btn-outline">Edit</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Form tambah / edit kamar -->
+    <div class="card" id="form-kamar">
+      <h2>Tambah / Edit Kamar</h2>
+      <p class="sub">Isi data kamar, lalu simpan</p>
+      <form action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="no_kamar">Nomor Kamar</label>
+            <input type="text" id="no_kamar" name="no_kamar" placeholder="Contoh: A3" required>
+          </div>
+          <div class="form-group">
+            <label for="tipe">Tipe Kamar</label>
+            <select id="tipe" name="tipe">
+              <option>Standar</option>
+              <option>Nyaman</option>
+              <option>Premium</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="harga">Harga Sewa / Bulan (Rp)</label>
+            <input type="number" id="harga" name="harga" placeholder="850000" required>
+          </div>
+          <div class="form-group">
+            <label for="status">Status Kamar</label>
+            <select id="status" name="status">
+              <option value="kosong">Kosong</option>
+              <option value="terisi">Terisi</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="keterangan">Keterangan</label>
+            <textarea id="keterangan" name="keterangan" placeholder="Fasilitas kamar, ukuran, dll."></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Simpan Kamar</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+</body>
+</html>

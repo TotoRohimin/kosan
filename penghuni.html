@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Penghuni - Ibu Kos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a href="dashboard.html" class="brand"><span class="logo">🏠</span> Kos Melati Asri</a>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="kamar.html">🛏️ Kamar</a>
+      <a href="penghuni.html" class="active">👤 Data Penghuni</a>
+      <a href="pembayaran.html">💳 Pembayaran</a>
+      <a href="riwayat.html">🕘 Riwayat Pembayaran</a>
+      <a href="laporan.html">📄 Laporan</a>
+      <a href="informasi-kos.html">⚙️ Informasi Kos</a>
+      <a href="index.html" target="_blank">🌐 Lihat Halaman Publik</a>
+    </nav>
+    <a href="login.html" class="logout" style="padding:11px 14px">🚪 Keluar</a>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Data Penghuni</h1>
+        <p>Siapa yang menempati setiap kamar</p>
+      </div>
+      <div class="user-chip"><span class="avatar">S</span> Ibu Siti</div>
+    </div>
+
+    <div class="card mb">
+      <h2>Daftar Penghuni</h2>
+      <p class="sub">9 penghuni aktif</p>
+      <div class="toolbar">
+        <input type="search" placeholder="Cari nama penghuni...">
+        <select>
+          <option>Semua status</option>
+          <option>Aktif</option>
+          <option>Keluar</option>
+        </select>
+        <a href="#form-penghuni" class="btn">+ Catat Penghuni Baru</a>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Nama</th><th>Kamar</th><th>No. HP</th><th>Tanggal Masuk</th><th>Status</th><th>Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Dewi Lestari</td><td>A1</td><td>0812-1111-2222</td><td>12 Jan 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Rina Marlina</td><td>A2</td><td>0813-2222-3333</td><td>03 Feb 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Putri Ayu</td><td>A4</td><td>0857-3333-4444</td><td>20 Mar 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Maya Anggraini</td><td>A5</td><td>0821-4444-5555</td><td>01 Apr 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Lia Permata</td><td>A6</td><td>0878-5555-6666</td><td>15 Apr 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Sari Wulandari</td><td>B1</td><td>0852-6666-7777</td><td>05 Mei 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Nadia Safitri</td><td>B3</td><td>0896-7777-8888</td><td>18 Jun 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Anisa Rahma</td><td>B4</td><td>0813-8888-9999</td><td>02 Agu 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+            <tr><td>Citra Dewanti</td><td>B6</td><td>0821-9999-0000</td><td>01 Sep 2026</td><td><span class="badge badge-green">Aktif</span></td><td class="aksi"><a href="#form-penghuni" class="btn btn-sm btn-outline">Edit</a><a href="#" class="btn btn-sm btn-danger">Keluar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" id="form-penghuni">
+      <h2>Catat Penghuni</h2>
+      <p class="sub">Isi data penghuni baru atau ubah data yang sudah ada</p>
+      <form action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required>
+          </div>
+          <div class="form-group">
+            <label for="no_hp">No. HP / WhatsApp</label>
+            <input type="tel" id="no_hp" name="no_hp" placeholder="08xx-xxxx-xxxx" required>
+          </div>
+          <div class="form-group">
+            <label for="nik">NIK / No. Identitas</label>
+            <input type="text" id="nik" name="nik">
+          </div>
+          <div class="form-group">
+            <label for="kamar">Kamar yang Ditempati</label>
+            <select id="kamar" name="kamar">
+              <option>A3 (kosong)</option>
+              <option>B2 (kosong)</option>
+              <option>B5 (kosong)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tgl_masuk">Tanggal Masuk</label>
+            <input type="date" id="tgl_masuk" name="tgl_masuk" required>
+          </div>
+          <div class="form-group">
+            <label for="kontak_darurat">Kontak Darurat</label>
+            <input type="tel" id="kontak_darurat" name="kontak_darurat">
+          </div>
+          <div class="form-group full">
+            <label for="alamat">Alamat Asal</label>
+            <textarea id="alamat" name="alamat"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Simpan Penghuni</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+</body>
+</html>

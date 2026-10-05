@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran - Ibu Kos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a href="dashboard.html" class="brand"><span class="logo">🏠</span> Kos Melati Asri</a>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="kamar.html">🛏️ Kamar</a>
+      <a href="penghuni.html">👤 Data Penghuni</a>
+      <a href="pembayaran.html" class="active">💳 Pembayaran</a>
+      <a href="riwayat.html">🕘 Riwayat Pembayaran</a>
+      <a href="laporan.html">📄 Laporan</a>
+      <a href="informasi-kos.html">⚙️ Informasi Kos</a>
+      <a href="index.html" target="_blank">🌐 Lihat Halaman Publik</a>
+    </nav>
+    <a href="login.html" class="logout" style="padding:11px 14px">🚪 Keluar</a>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Catat Pembayaran</h1>
+        <p>Catat status, tanggal, nominal, dan bulan pembayaran</p>
+      </div>
+      <div class="user-chip"><span class="avatar">S</span> Ibu Siti</div>
+    </div>
+
+    <div class="two-col">
+      <!-- Form pembayaran -->
+      <div class="card">
+        <h2>Form Pembayaran</h2>
+        <p class="sub">Isi data pembayaran penghuni</p>
+        <form action="#" method="post">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="penghuni">Penghuni</label>
+              <select id="penghuni" name="penghuni" required>
+                <option value="">-- Pilih penghuni --</option>
+                <option>Dewi Lestari (A1)</option>
+                <option>Rina Marlina (A2)</option>
+                <option>Putri Ayu (A4)</option>
+                <option>Maya Anggraini (A5)</option>
+                <option>Lia Permata (A6)</option>
+                <option>Sari Wulandari (B1)</option>
+                <option>Nadia Safitri (B3)</option>
+                <option>Anisa Rahma (B4)</option>
+                <option>Citra Dewanti (B6)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bulan">Bulan Pembayaran</label>
+              <select id="bulan" name="bulan">
+                <option>Januari 2026</option><option>Februari 2026</option><option>Maret 2026</option>
+                <option>April 2026</option><option>Mei 2026</option><option>Juni 2026</option>
+                <option>Juli 2026</option><option>Agustus 2026</option><option>September 2026</option>
+                <option selected>Oktober 2026</option><option>November 2026</option><option>Desember 2026</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tgl_bayar">Tanggal Bayar</label>
+              <input type="date" id="tgl_bayar" name="tgl_bayar" required>
+            </div>
+            <div class="form-group">
+              <label for="nominal">Nominal (Rp)</label>
+              <input type="number" id="nominal" name="nominal" placeholder="850000" required>
+            </div>
+            <div class="form-group">
+              <label for="metode">Metode</label>
+              <select id="metode" name="metode">
+                <option>Tunai</option>
+                <option>Transfer Bank</option>
+                <option>E-Wallet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option value="lunas">Lunas</option>
+                <option value="belum">Belum Lunas</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="catatan">Catatan</label>
+              <textarea id="catatan" name="catatan" placeholder="Opsional"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn">Simpan Pembayaran</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Belum bayar -->
+      <div class="card">
+        <h2>Belum Bayar Bulan Ini</h2>
+        <p class="sub">Oktober 2026</p>
+        <ul class="list-simple">
+          <li><div>Putri Ayu<small>Kamar A4 &middot; Rp 850.000</small></div><span class="badge badge-red">Belum</span></li>
+          <li><div>Sari Wulandari<small>Kamar B1 &middot; Rp 1.100.000</small></div><span class="badge badge-red">Belum</span></li>
+        </ul>
+        <p style="margin-top:14px;font-size:13.5px;color:var(--muted)">Batas pembayaran: tanggal 10 setiap bulan.</p>
+      </div>
+    </div>
+
+    <!-- Pembayaran terbaru -->
+    <div class="card">
+      <h2>Pembayaran Terbaru</h2>
+      <p class="sub">5 transaksi terakhir</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tanggal</th><th>Penghuni</th><th>Kamar</th><th>Bulan</th><th>Nominal</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>03 Okt 2026</td><td>Dewi Lestari</td><td>A1</td><td>Oktober 2026</td><td>Rp 850.000</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>02 Okt 2026</td><td>Rina Marlina</td><td>A2</td><td>Oktober 2026</td><td>Rp 850.000</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>02 Okt 2026</td><td>Nadia Safitri</td><td>B3</td><td>Oktober 2026</td><td>Rp 1.100.000</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>01 Okt 2026</td><td>Anisa Rahma</td><td>B4</td><td>Oktober 2026</td><td>Rp 1.450.000</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>01 Okt 2026</td><td>Citra Dewanti</td><td>B6</td><td>Oktober 2026</td><td>Rp 1.450.000</td><td><span class="badge badge-green">Lunas</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informasi Kos - Ibu Kos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a href="dashboard.html" class="brand"><span class="logo">🏠</span> Kos Melati Asri</a>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="kamar.html">🛏️ Kamar</a>
+      <a href="penghuni.html">👤 Data Penghuni</a>
+      <a href="pembayaran.html">💳 Pembayaran</a>
+      <a href="riwayat.html">🕘 Riwayat Pembayaran</a>
+      <a href="laporan.html">📄 Laporan</a>
+      <a href="informasi-kos.html" class="active">⚙️ Informasi Kos</a>
+      <a href="index.html" target="_blank">🌐 Lihat Halaman Publik</a>
+    </nav>
+    <a href="login.html" class="logout" style="padding:11px 14px">🚪 Keluar</a>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Informasi Kos</h1>
+        <p>Data ini tampil di halaman calon penghuni (hasil scan QR)</p>
+      </div>
+      <div class="user-chip"><span class="avatar">S</span> Ibu Siti</div>
+    </div>
+
+    <form action="#" method="post">
+
+      <div class="card mb">
+        <h2>Data Umum</h2>
+        <p class="sub">Nama, kontak, dan lokasi kos</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nama_kos">Nama Kos</label>
+            <input type="text" id="nama_kos" name="nama_kos" value="Kos Melati Asri">
+          </div>
+          <div class="form-group">
+            <label for="jumlah_kamar">Jumlah Kamar</label>
+            <input type="number" id="jumlah_kamar" name="jumlah_kamar" value="12">
+          </div>
+          <div class="form-group">
+            <label for="nama_pemilik">Nama Pemilik</label>
+            <input type="text" id="nama_pemilik" name="nama_pemilik" value="Ibu Siti Aminah">
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">No. WhatsApp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" value="6281234567890">
+          </div>
+          <div class="form-group full">
+            <label for="alamat">Alamat / Lokasi</label>
+            <textarea id="alamat" name="alamat">Jl. Melati No. 12, Kel. Sukajadi, Kec. Sukasari, Kota Bandung, Jawa Barat</textarea>
+          </div>
+          <div class="form-group full">
+            <label for="maps">Link Google Maps</label>
+            <input type="url" id="maps" name="maps" placeholder="https://maps.google.com/...">
+          </div>
+          <div class="form-group full">
+            <label for="deskripsi">Deskripsi Singkat</label>
+            <textarea id="deskripsi" name="deskripsi">Kos putri yang nyaman, bersih, dan aman. Dekat kampus, minimarket, dan transportasi umum.</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb">
+        <h2>Harga Sewa</h2>
+        <p class="sub">Harga per bulan untuk tiap tipe kamar</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="harga_standar">Tipe Standar (Rp)</label>
+            <input type="number" id="harga_standar" name="harga_standar" value="850000">
+          </div>
+          <div class="form-group">
+            <label for="harga_nyaman">Tipe Nyaman (Rp)</label>
+            <input type="number" id="harga_nyaman" name="harga_nyaman" value="1100000">
+          </div>
+          <div class="form-group">
+            <label for="harga_premium">Tipe Premium (Rp)</label>
+            <input type="number" id="harga_premium" name="harga_premium" value="1450000">
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb">
+        <h2>Fasilitas dan Peraturan</h2>
+        <p class="sub">Satu item per baris</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fasilitas">Fasilitas Kos</label>
+            <textarea id="fasilitas" name="fasilitas" style="min-height:180px">WiFi 24 jam
+Parkir motor
+Area jemur
+Dapur bersama
+CCTV
+Dispenser air minum</textarea>
+          </div>
+          <div class="form-group">
+            <label for="peraturan">Peraturan Kos</label>
+            <textarea id="peraturan" name="peraturan" style="min-height:180px">Kos khusus putri
+Jam malam pukul 22.00 WIB
+Dilarang membawa tamu lawan jenis ke kamar
+Pembayaran paling lambat tanggal 10
+Menjaga kebersihan dan ketenangan
+Dilarang merokok dan membawa hewan</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>QR Code</h2>
+        <p class="sub">Tempel QR di depan kos agar calon penghuni bisa scan</p>
+        <div class="qr-note">
+          <div class="qr"></div>
+          <div>
+            <p>QR ini mengarah ke halaman informasi kos.</p>
+            <a href="#" class="btn btn-outline btn-sm" style="margin-top:10px">⬇️ Unduh QR</a>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Simpan Perubahan</button>
+          <a href="dashboard.html" class="btn btn-outline">Batal</a>
+        </div>
+      </div>
+
+    </form>
+  </main>
+</div>
+</body>
+</html>

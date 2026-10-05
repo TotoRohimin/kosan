@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan - Ibu Kos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a href="dashboard.html" class="brand"><span class="logo">🏠</span> Kos Melati Asri</a>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="kamar.html">🛏️ Kamar</a>
+      <a href="penghuni.html">👤 Data Penghuni</a>
+      <a href="pembayaran.html">💳 Pembayaran</a>
+      <a href="riwayat.html">🕘 Riwayat Pembayaran</a>
+      <a href="laporan.html" class="active">📄 Laporan</a>
+      <a href="informasi-kos.html">⚙️ Informasi Kos</a>
+      <a href="index.html" target="_blank">🌐 Lihat Halaman Publik</a>
+    </nav>
+    <a href="login.html" class="logout" style="padding:11px 14px">🚪 Keluar</a>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Laporan</h1>
+        <p>Rekap pembayaran per bulan dan data kamar</p>
+      </div>
+      <button class="btn btn-blue" onclick="window.print()">🖨️ Cetak Laporan</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="card mb">
+      <form action="#" method="get" class="toolbar" style="margin:0">
+        <select name="bulan">
+          <option>Oktober</option><option>September</option><option>Agustus</option>
+        </select>
+        <select name="tahun">
+          <option>2026</option><option>2025</option>
+        </select>
+        <button class="btn" type="submit">Tampilkan</button>
+      </form>
+    </div>
+
+    <!-- Ringkasan -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="top">Pemasukan Bulan Ini <span class="ico g">💰</span></div>
+        <div class="num" style="font-size:24px">Rp 7.050.000</div>
+      </div>
+      <div class="stat-card">
+        <div class="top">Sudah Lunas <span class="ico b">✅</span></div>
+        <div class="num">7</div>
+      </div>
+      <div class="stat-card">
+        <div class="top">Belum Bayar <span class="ico r">⚠️</span></div>
+        <div class="num">2</div>
+      </div>
+      <div class="stat-card">
+        <div class="top">Tingkat Hunian <span class="ico y">🏘️</span></div>
+        <div class="num">75%</div>
+      </div>
+    </div>
+
+    <!-- Grafik -->
+    <div class="card mb">
+      <h2>Pemasukan 6 Bulan Terakhir</h2>
+      <p class="sub">Dalam jutaan rupiah</p>
+      <div class="chart">
+        <div class="bar"><b>7,2</b><i style="height:72%"></i></div>
+        <div class="bar"><b>8,4</b><i style="height:84%"></i></div>
+        <div class="bar"><b>8,4</b><i style="height:84%"></i></div>
+        <div class="bar"><b>9,1</b><i style="height:91%"></i></div>
+        <div class="bar"><b>9,5</b><i style="height:95%"></i></div>
+        <div class="bar"><b>7,1</b><i style="height:71%"></i></div>
+      </div>
+      <div class="chart-label">
+        <span>Mei</span><span>Jun</span><span>Jul</span><span>Agu</span><span>Sep</span><span>Okt</span>
+      </div>
+    </div>
+
+    <!-- Rekap pembayaran -->
+    <div class="card mb">
+      <h2>Rekap Pembayaran Oktober 2026</h2>
+      <p class="sub">Semua penghuni aktif</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Kamar</th><th>Penghuni</th><th>Tarif</th><th>Dibayar</th><th>Tanggal</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>A1</td><td>Dewi Lestari</td><td>Rp 850.000</td><td>Rp 850.000</td><td>03 Okt</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>A2</td><td>Rina Marlina</td><td>Rp 850.000</td><td>Rp 850.000</td><td>02 Okt</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>A4</td><td>Putri Ayu</td><td>Rp 850.000</td><td>-</td><td>-</td><td><span class="badge badge-red">Belum</span></td></tr>
+            <tr><td>A5</td><td>Maya Anggraini</td><td>Rp 1.100.000</td><td>Rp 1.100.000</td><td>01 Okt</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>A6</td><td>Lia Permata</td><td>Rp 1.100.000</td><td>Rp 1.100.000</td><td>04 Okt</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>B1</td><td>Sari Wulandari</td><td>Rp 1.100.000</td><td>-</td><td>-</td><td><span class="badge badge-red">Belum</span></td></tr>
+            <tr><td>B3</td><td>Nadia Safitri</td><td>Rp 1.100.000</td><td>Rp 1.100.000</td><td>02 Okt</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>B4</td><td>Anisa Rahma</td><td>Rp 1.450.000</td><td>Rp 1.450.000</td><td>01 Okt</td><td><span class="badge badge-green">Lunas</span></td></tr>
+            <tr><td>B6</td><td>Citra Dewanti</td><td>Rp 1.450.000</td><td>Rp 1.450.000</td><td>01 Okt</td><td><span class="badge badge-green">Lunas</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data kamar -->
+    <div class="card">
+      <h2>Rekap Data Kamar</h2>
+      <p class="sub">Berdasarkan tipe kamar</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tipe</th><th>Harga</th><th>Total</th><th>Terisi</th><th>Kosong</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Standar</td><td>Rp 850.000</td><td>4</td><td>3</td><td>1</td></tr>
+            <tr><td>Nyaman</td><td>Rp 1.100.000</td><td>4</td><td>3</td><td>1</td></tr>
+            <tr><td>Premium</td><td>Rp 1.450.000</td><td>4</td><td>3</td><td>1</td></tr>
+            <tr><td><strong>Total</strong></td><td></td><td><strong>12</strong></td><td><strong>9</strong></td><td><strong>3</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Ibu Kos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <a href="dashboard.html" class="brand"><span class="logo">🏠</span> Kos Melati Asri</a>
+    <nav>
+      <a href="dashboard.html" class="active">📊 Dashboard</a>
+      <a href="kamar.html">🛏️ Kamar</a>
+      <a href="penghuni.html">👤 Data Penghuni</a>
+      <a href="pembayaran.html">💳 Pembayaran</a>
+      <a href="riwayat.html">🕘 Riwayat Pembayaran</a>
+      <a href="laporan.html">📄 Laporan</a>
+      <a href="informasi-kos.html">⚙️ Informasi Kos</a>
+      <a href="index.html" target="_blank">🌐 Lihat Halaman Publik</a>
+    </nav>
+    <a href="login.html" class="logout" style="padding:11px 14px">🚪 Keluar</a>
+  </aside>
+
+  <!-- ===== KONTEN ===== -->
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Ringkasan kondisi kos hari ini, Senin, 5 Oktober 2026</p>
+      </div>
+      <div class="user-chip"><span class="avatar">S</span> Ibu Siti</div>
+    </div>
+
+    <!-- Statistik -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="top">Jumlah Kamar <span class="ico b">🏘️</span></div>
+        <div class="num">12</div>
+      </div>
+      <div class="stat-card">
+        <div class="top">Kamar Terisi <span class="ico g">🛏️</span></div>
+        <div class="num">9</div>
+      </div>
+      <div class="stat-card">
+        <div class="top">Kamar Kosong <span class="ico y">🔓</span></div>
+        <div class="num">3</div>
+      </div>
+      <div class="stat-card">
+        <div class="top">Belum Bayar <span class="ico r">⚠️</span></div>
+        <div class="num">2</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <!-- Denah kamar -->
+      <div class="card">
+        <h2>Status Kamar</h2>
+        <p class="sub">Biru: terisi &middot; Hijau putus-putus: kosong</p>
+        <div class="denah">
+          <div class="t">A1</div><div class="t">A2</div><div class="k">A3</div>
+          <div class="t">A4</div><div class="t">A5</div><div class="t">A6</div>
+          <div class="t">B1</div><div class="k">B2</div><div class="t">B3</div>
+          <div class="t">B4</div><div class="k">B5</div><div class="t">B6</div>
+        </div>
+        <div style="margin-top:20px">
+          <div style="display:flex;justify-content:space-between;font-size:14px">
+            <span>Tingkat hunian</span><strong>75%</strong>
+          </div>
+          <div class="progress"><span style="width:75%"></span></div>
+        </div>
+      </div>
+
+      <!-- Pembayaran bulan ini -->
+      <div class="card">
+        <h2>Pembayaran Oktober 2026</h2>
+        <p class="sub">Status pembayaran bulan berjalan</p>
+        <ul class="list-simple">
+          <li><div>Dewi Lestari<small>Kamar A1</small></div><span class="badge badge-green">Lunas</span></li>
+          <li><div>Rina Marlina<small>Kamar A2</small></div><span class="badge badge-green">Lunas</span></li>
+          <li><div>Putri Ayu<small>Kamar A4</small></div><span class="badge badge-red">Belum Bayar</span></li>
+          <li><div>Sari Wulandari<small>Kamar B1</small></div><span class="badge badge-red">Belum Bayar</span></li>
+          <li><div>Nadia Safitri<small>Kamar B3</small></div><span class="badge badge-green">Lunas</span></li>
+        </ul>
+        <a href="pembayaran.html" class="btn btn-outline btn-sm" style="margin-top:12px">Catat Pembayaran</a>
+      </div>
+    </div>
+
+    <!-- Pintasan sesuai alur -->
+    <div class="card">
+      <h2>Pintasan Cepat</h2>
+      <p class="sub">Sesuai alur kerja ibu kos</p>
+      <div class="toolbar" style="margin:0">
+        <a href="kamar.html" class="btn">🛏️ Update Kamar</a>
+        <a href="penghuni.html" class="btn">👤 Catat Penghuni</a>
+        <a href="pembayaran.html" class="btn">💳 Catat Pembayaran</a>
+        <a href="laporan.html" class="btn btn-blue">📄 Lihat Laporan</a>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

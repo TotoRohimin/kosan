@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Pembayaran - Ibu Kos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a href="dashboard.html" class="brand"><span class="logo">🏠</span> Kos Melati Asri</a>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="kamar.html">🛏️ Kamar</a>
+      <a href="penghuni.html">👤 Data Penghuni</a>
+      <a href="pembayaran.html">💳 Pembayaran</a>
+      <a href="riwayat.html" class="active">🕘 Riwayat Pembayaran</a>
+      <a href="laporan.html">📄 Laporan</a>
+      <a href="informasi-kos.html">⚙️ Informasi Kos</a>
+      <a href="index.html" target="_blank">🌐 Lihat Halaman Publik</a>
+    </nav>
+    <a href="login.html" class="logout" style="padding:11px 14px">🚪 Keluar</a>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Riwayat Pembayaran</h1>
+        <p>Lihat pembayaran setiap penghuni</p>
+      </div>
+      <div class="user-chip"><span class="avatar">S</span> Ibu Siti</div>
+    </div>
+
+    <div class="card mb">
+      <form action="#" method="get" class="toolbar" style="margin:0">
+        <select name="penghuni">
+          <option>Dewi Lestari (A1)</option>
+          <option>Rina Marlina (A2)</option>
+          <option>Putri Ayu (A4)</option>
+          <option>Sari Wulandari (B1)</option>
+        </select>
+        <select name="tahun">
+          <option>2026</option>
+          <option>2025</option>
+        </select>
+        <button class="btn" type="submit">Tampilkan</button>
+      </form>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h2>Dewi Lestari &middot; Kamar A1</h2>
+        <p class="sub">Riwayat pembayaran tahun 2026</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Bulan</th><th>Tanggal Bayar</th><th>Nominal</th><th>Metode</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Januari</td><td>12 Jan 2026</td><td>Rp 850.000</td><td>Tunai</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>Februari</td><td>05 Feb 2026</td><td>Rp 850.000</td><td>Transfer Bank</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>Maret</td><td>04 Mar 2026</td><td>Rp 850.000</td><td>Transfer Bank</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>April</td><td>06 Apr 2026</td><td>Rp 850.000</td><td>E-Wallet</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>Mei</td><td>09 Mei 2026</td><td>Rp 850.000</td><td>Tunai</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>Juni</td><td>03 Jun 2026</td><td>Rp 850.000</td><td>Transfer Bank</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>Juli</td><td>05 Jul 2026</td><td>Rp 850.000</td><td>Transfer Bank</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>Agustus</td><td>11 Agu 2026</td><td>Rp 850.000</td><td>Tunai</td><td><span class="badge badge-yellow">Terlambat</span></td></tr>
+              <tr><td>September</td><td>04 Sep 2026</td><td>Rp 850.000</td><td>Transfer Bank</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>Oktober</td><td>03 Okt 2026</td><td>Rp 850.000</td><td>Transfer Bank</td><td><span class="badge badge-green">Lunas</span></td></tr>
+              <tr><td>November</td><td>-</td><td>-</td><td>-</td><td><span class="badge badge-red">Belum</span></td></tr>
+              <tr><td>Desember</td><td>-</td><td>-</td><td>-</td><td><span class="badge badge-red">Belum</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Ringkasan</h2>
+        <p class="sub">Dewi Lestari, 2026</p>
+        <ul class="list-simple">
+          <li><span>Total dibayar</span><strong>Rp 8.500.000</strong></li>
+          <li><span>Bulan lunas</span><strong>9 bulan</strong></li>
+          <li><span>Bulan terlambat</span><strong>1 bulan</strong></li>
+          <li><span>Bulan belum bayar</span><strong>2 bulan</strong></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
